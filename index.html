@@ -1,0 +1,734 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Dress-Up Darling | Fan Page</title>
+    <meta
+      name="description"
+      content="Página fan en español LATAM sobre el anime My Dress-Up Darling: romance, cosplay, personajes y momentos destacados."
+    />
+    <style>
+      :root {
+        --ink: #221c25;
+        --muted: #6f5f69;
+        --rose: #f45f99;
+        --rose-dark: #c53670;
+        --teal: #109b9b;
+        --gold: #d8a632;
+        --paper: #fff8fb;
+        --white: #ffffff;
+        --line: rgba(34, 28, 37, 0.16);
+        --shadow: 0 22px 70px rgba(64, 31, 49, 0.18);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background:
+          linear-gradient(rgba(255, 248, 251, 0.92), rgba(255, 248, 251, 0.92)),
+          url("https://bisquedoll-anime.com/assets/img/bg_deco_01.png") center top / 620px auto fixed;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .site-header {
+        position: fixed;
+        z-index: 20;
+        top: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 14px clamp(18px, 4vw, 56px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+        background: rgba(34, 28, 37, 0.72);
+        color: var(--white);
+        backdrop-filter: blur(18px);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 0;
+        font-weight: 900;
+        letter-spacing: 0;
+      }
+
+      .brand-mark {
+        display: grid;
+        width: 34px;
+        height: 34px;
+        place-items: center;
+        border: 2px solid rgba(255, 255, 255, 0.84);
+        border-radius: 50%;
+        color: #ffd7e8;
+        font-size: 18px;
+      }
+
+      .brand span:last-child {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: clamp(10px, 2.2vw, 24px);
+        color: rgba(255, 255, 255, 0.84);
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .nav a {
+        border-bottom: 2px solid transparent;
+        padding: 8px 0;
+      }
+
+      .nav a:hover {
+        border-color: #ffd1e5;
+        color: var(--white);
+      }
+
+      .hero {
+        min-height: 88vh;
+        display: grid;
+        align-items: end;
+        padding: 118px clamp(18px, 6vw, 78px) 50px;
+        background:
+          linear-gradient(90deg, rgba(19, 12, 17, 0.86) 0%, rgba(29, 18, 23, 0.58) 42%, rgba(29, 18, 23, 0.12) 100%),
+          url("https://bisquedoll-anime.com/assets/img/main_kv_02.jpg") center / cover no-repeat;
+        color: var(--white);
+      }
+
+      .hero-content {
+        width: min(740px, 100%);
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 16px;
+        color: #ffd9e9;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 34px;
+        height: 2px;
+        background: var(--gold);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 720px;
+        margin-bottom: 18px;
+        font-size: clamp(46px, 7.4vw, 94px);
+        line-height: 0.96;
+        letter-spacing: 0;
+      }
+
+      .hero p {
+        max-width: 620px;
+        margin-bottom: 28px;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: clamp(18px, 2.2vw, 23px);
+        line-height: 1.45;
+      }
+
+      .hero-actions,
+      .filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 46px;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid transparent;
+        border-radius: 999px;
+        padding: 12px 20px;
+        font-weight: 900;
+        cursor: pointer;
+        transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+      }
+
+      .button.primary {
+        background: var(--rose);
+        color: var(--white);
+        box-shadow: 0 12px 30px rgba(244, 95, 153, 0.34);
+      }
+
+      .button.ghost {
+        border-color: rgba(255, 255, 255, 0.62);
+        color: var(--white);
+      }
+
+      main {
+        overflow: hidden;
+      }
+
+      .section {
+        padding: clamp(54px, 8vw, 96px) clamp(18px, 6vw, 78px);
+      }
+
+      .section-inner {
+        width: min(1160px, 100%);
+        margin: 0 auto;
+      }
+
+      .section-heading {
+        display: grid;
+        grid-template-columns: minmax(0, 0.72fr) minmax(280px, 0.48fr);
+        gap: clamp(24px, 5vw, 68px);
+        align-items: end;
+        margin-bottom: 34px;
+      }
+
+      h2 {
+        margin-bottom: 10px;
+        font-size: clamp(31px, 4.5vw, 58px);
+        line-height: 1.02;
+        letter-spacing: 0;
+      }
+
+      .section-heading p,
+      .lead {
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.7;
+      }
+
+      .story-band {
+        background: var(--white);
+      }
+
+      .story-grid {
+        display: grid;
+        grid-template-columns: minmax(260px, 0.45fr) minmax(0, 0.55fr);
+        gap: clamp(22px, 5vw, 54px);
+        align-items: center;
+      }
+
+      .poster {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+      }
+
+      .story-copy {
+        display: grid;
+        gap: 20px;
+      }
+
+      .fact-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .fact-list li {
+        border-left: 4px solid var(--rose);
+        background: #fff1f7;
+        padding: 14px 16px;
+        border-radius: 6px;
+      }
+
+      .fact-list strong {
+        display: block;
+        margin-bottom: 4px;
+      }
+
+      .characters {
+        background: #f8edf7;
+      }
+
+      .filters {
+        margin-bottom: 24px;
+      }
+
+      .filter {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: var(--white);
+        color: var(--ink);
+        padding: 10px 16px;
+        font-weight: 900;
+        cursor: pointer;
+      }
+
+      .filter.active {
+        border-color: var(--teal);
+        background: var(--teal);
+        color: var(--white);
+      }
+
+      .character-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .character-card {
+        min-height: 240px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+        padding: 22px;
+        box-shadow: 0 16px 48px rgba(57, 41, 52, 0.08);
+      }
+
+      .character-card[data-group="cosplay"] {
+        border-top: 5px solid var(--rose);
+      }
+
+      .character-card[data-group="craft"] {
+        border-top: 5px solid var(--teal);
+      }
+
+      .character-card[data-group="world"] {
+        border-top: 5px solid var(--gold);
+      }
+
+      .character-card h3 {
+        margin-bottom: 10px;
+        font-size: 24px;
+      }
+
+      .character-card p {
+        color: var(--muted);
+        line-height: 1.62;
+      }
+
+      .tag {
+        width: fit-content;
+        border-radius: 999px;
+        background: #f3f5f5;
+        color: #405154;
+        padding: 7px 11px;
+        font-size: 12px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .cosplay {
+        background: #172022;
+        color: var(--white);
+      }
+
+      .cosplay .section-heading p {
+        color: rgba(255, 255, 255, 0.72);
+      }
+
+      .cosplay-layout {
+        display: grid;
+        grid-template-columns: minmax(280px, 0.52fr) minmax(280px, 0.48fr);
+        gap: clamp(22px, 5vw, 52px);
+        align-items: stretch;
+      }
+
+      .cosplay-image {
+        min-height: 520px;
+        border-radius: 8px;
+        background: url("https://bisquedoll-anime.com/assets/img/main_kv.png") center top / cover no-repeat;
+        box-shadow: 0 24px 72px rgba(0, 0, 0, 0.32);
+      }
+
+      .cosplay-notes {
+        display: grid;
+        align-content: center;
+        gap: 16px;
+      }
+
+      .note {
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.06);
+        padding: 18px;
+      }
+
+      .note h3 {
+        margin-bottom: 8px;
+        color: #ffe0ec;
+      }
+
+      .note p {
+        margin-bottom: 0;
+        color: rgba(255, 255, 255, 0.72);
+        line-height: 1.62;
+      }
+
+      .watch {
+        background: var(--paper);
+      }
+
+      .watch-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .watch-card {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--white);
+        padding: 22px;
+      }
+
+      .watch-card strong {
+        display: block;
+        margin-bottom: 10px;
+        color: var(--rose-dark);
+        font-size: 20px;
+      }
+
+      .watch-card p {
+        margin-bottom: 0;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .quote-band {
+        background: var(--rose-dark);
+        color: var(--white);
+        text-align: center;
+      }
+
+      .quote-band p {
+        width: min(820px, 100%);
+        margin: 0 auto;
+        font-size: clamp(24px, 3.4vw, 42px);
+        font-weight: 900;
+        line-height: 1.22;
+      }
+
+      footer {
+        padding: 26px clamp(18px, 6vw, 78px);
+        background: var(--ink);
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 13px;
+        line-height: 1.6;
+      }
+
+      footer a {
+        color: #ffd4e6;
+        font-weight: 800;
+      }
+
+      @media (max-width: 860px) {
+        .site-header {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        .nav {
+          width: 100%;
+          overflow-x: auto;
+          padding-bottom: 2px;
+        }
+
+        .hero {
+          min-height: 86vh;
+          padding-top: 146px;
+          background-position: 58% center;
+        }
+
+        .section-heading,
+        .story-grid,
+        .cosplay-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .character-grid,
+        .watch-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .cosplay-image {
+          min-height: 420px;
+          background-position: center 12%;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .brand span:last-child {
+          max-width: 250px;
+        }
+
+        .hero {
+          background-position: 61% center;
+        }
+
+        .hero-actions .button {
+          width: 100%;
+        }
+
+        .fact-list {
+          grid-template-columns: 1fr;
+        }
+
+        .character-card {
+          min-height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Inicio">
+        <span class="brand-mark">MD</span>
+        <span>My Dress-Up Darling</span>
+      </a>
+      <nav class="nav" aria-label="Secciones principales">
+        <a href="#historia">Historia</a>
+        <a href="#personajes">Personajes</a>
+        <a href="#cosplay">Cosplay</a>
+        <a href="#ver">Por qué verla</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-content">
+          <p class="eyebrow">Romance, costura y cosplay</p>
+          <h1>My Dress-Up Darling</h1>
+          <p>
+            La historia de Marin Kitagawa y Wakana Gojo convierte una sala de costura en el lugar donde dos mundos
+            empiezan a entenderse.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#historia">Entrar al mundo</a>
+            <a class="button ghost" href="#cosplay">Ver el enfoque cosplay</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section story-band" id="historia">
+        <div class="section-inner story-grid">
+          <figure class="poster">
+            <img
+              src="https://bisquedoll-anime.com/assets/img/main_kv_02.jpg"
+              alt="Marin y Gojo en la sala de costura junto a un traje en proceso"
+            />
+          </figure>
+          <div class="story-copy">
+            <div>
+              <p class="eyebrow">La premisa</p>
+              <h2>Una comedia romántica donde el detalle importa.</h2>
+              <p class="lead">
+                Wakana Gojo sueña con perfeccionar el arte de las muñecas hina. Marin Kitagawa ama el cosplay sin
+                esconderlo. Cuando ella descubre su talento para coser, nace una colaboración que mezcla técnica,
+                confianza y sentimientos que avanzan a su propio ritmo.
+              </p>
+            </div>
+            <ul class="fact-list">
+              <li><strong>Género</strong> Romance, slice of life, comedia</li>
+              <li><strong>Estudio</strong> CloverWorks</li>
+              <li><strong>Origen</strong> Manga de Shinichi Fukuda</li>
+              <li><strong>Tema central</strong> Crear sin avergonzarse de lo que amas</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section characters" id="personajes">
+        <div class="section-inner">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Personajes</p>
+              <h2>El encanto está en cómo chocan sus mundos.</h2>
+            </div>
+            <p>
+              Marin trae energía frontal y fanatismo sin filtro; Gojo aporta paciencia, oficio y una sensibilidad que
+              el anime trata con mucho cariño.
+            </p>
+          </div>
+
+          <div class="filters" role="group" aria-label="Filtrar personajes">
+            <button class="filter active" type="button" data-filter="all">Todos</button>
+            <button class="filter" type="button" data-filter="cosplay">Cosplay</button>
+            <button class="filter" type="button" data-filter="craft">Oficio</button>
+            <button class="filter" type="button" data-filter="world">Mundo fan</button>
+          </div>
+
+          <div class="character-grid">
+            <article class="character-card" data-group="cosplay">
+              <div>
+                <span class="tag">Cosplay</span>
+                <h3>Marin Kitagawa</h3>
+                <p>
+                  Extrovertida, directa y apasionada por sus personajes favoritos. Su entusiasmo mueve la historia y
+                  empuja a Gojo a mirar su propio talento con otros ojos.
+                </p>
+              </div>
+            </article>
+            <article class="character-card" data-group="craft">
+              <div>
+                <span class="tag">Oficio</span>
+                <h3>Wakana Gojo</h3>
+                <p>
+                  Reservado y dedicado a la artesanía. Su forma de observar telas, maquillaje y proporciones convierte
+                  cada traje en una pequeña declaración de cuidado.
+                </p>
+              </div>
+            </article>
+            <article class="character-card" data-group="world">
+              <div>
+                <span class="tag">Mundo fan</span>
+                <h3>Sajuna y Shinju</h3>
+                <p>
+                  Amplían el universo del cosplay con otras inseguridades, estilos y maneras de vivir la admiración por
+                  los personajes.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cosplay" id="cosplay">
+        <div class="section-inner">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Cosplay</p>
+              <h2>La fantasía se construye puntada por puntada.</h2>
+            </div>
+            <p>
+              La serie funciona porque no trata el cosplay solo como resultado final. Le da peso a la investigación, el
+              patronaje, la pose, la tela y el valor de mostrarse.
+            </p>
+          </div>
+
+          <div class="cosplay-layout">
+            <div class="cosplay-image" role="img" aria-label="Visual oficial con personajes y cosplays del anime"></div>
+            <div class="cosplay-notes">
+              <article class="note">
+                <h3>Diseno de personaje</h3>
+                <p>
+                  Cada cosplay cuenta algo distinto: una versión más segura, más teatral o más vulnerable de quien lo
+                  interpreta.
+                </p>
+              </article>
+              <article class="note">
+                <h3>Proceso creativo</h3>
+                <p>
+                  Las escenas de preparación hacen que el esfuerzo sea parte del romance. El traje no aparece por magia:
+                  se piensa, se mide y se corrige.
+                </p>
+              </article>
+              <article class="note">
+                <h3>Mirada emocional</h3>
+                <p>
+                  El anime entiende que admirar algo también puede ser una forma de hablar de uno mismo.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section watch" id="ver">
+        <div class="section-inner">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Por qué verla</p>
+              <h2>Ligera, expresiva y más tierna de lo que parece.</h2>
+            </div>
+            <p>
+              Si te gustan las historias donde el romance aparece a través de pasatiempos muy específicos, esta serie tiene
+              una identidad fácil de reconocer.
+            </p>
+          </div>
+
+          <div class="watch-grid">
+            <article class="watch-card">
+              <strong>Química protagonista</strong>
+              <p>Marin y Gojo contrastan sin sentirse forzados: ella abre puertas, él aprende a cruzarlas.</p>
+            </article>
+            <article class="watch-card">
+              <strong>Detalles de producción</strong>
+              <p>La animación se luce en expresiones, cambios de vestuario y pequeños gestos de vergüenza o entusiasmo.</p>
+            </article>
+            <article class="watch-card">
+              <strong>Mensaje claro</strong>
+              <p>La serie celebra los gustos personales incluso cuando parecen raros para los demás.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section quote-band">
+        <p>Vestirse como alguien que amas también puede ayudarte a descubrir quién eres.</p>
+      </section>
+    </main>
+
+    <footer>
+      Página fan creada por EimogOSO. Página fan no oficial. Imágenes enlazadas desde el
+      <a href="https://bisquedoll-anime.com/" target="_blank" rel="noreferrer">sitio oficial del anime</a>.
+      My Dress-Up Darling pertenece a sus respectivos titulares.
+    </footer>
+
+    <script>
+      const filterButtons = document.querySelectorAll(".filter");
+      const cards = document.querySelectorAll(".character-card");
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const filter = button.dataset.filter;
+          filterButtons.forEach((item) => item.classList.toggle("active", item === button));
+          cards.forEach((card) => {
+            const visible = filter === "all" || card.dataset.group === filter;
+            card.style.display = visible ? "flex" : "none";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
